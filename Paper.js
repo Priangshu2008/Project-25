@@ -3,19 +3,20 @@ class Paper {
 	  var options ={
 		  isStatic: false,
 		  "restitution":0.3,
-		  "friction":0.5,
+		  "friction":0,
 		  "density":1.2
-	  }	
-	  this.body = Bodies.rectangle(x, y, radius, options);
-	  this.radius = radius
+	  }
+	  this.x=x;
+	  this.y=y;
+	  this.radius=radius;
+	  this.image = loadImage("paper.png");	
+	  this.body = Bodies.circle(this.x, this.y, this.radius, options);
 
-	  world.add(world, this.body);
+	  World.add(world, this.body);
 	  }
    display() {
-	 ellipseMode(RADIUS);
-
-	 fill("yellow");
-
-	 circle(this.body.position.x, this.body.position.y, this.radius);
+	  var pos = this.body.position;
+	  imageMode(CENTER);
+	  image(this.image, this.x, this.y, this.radius, this.radius);
    }	
 };

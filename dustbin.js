@@ -11,7 +11,7 @@ constructor(x, y, width, height) {
 	  this.width = width;
 	  this.height = height;
 
-	  world.add(world, this.body);
+	  World.add(world, this.body);
 	}
    display() {
 	 rectMode(CENTER);
@@ -21,4 +21,3 @@ constructor(x, y, width, height) {
 	 rect(this.body.position.x, this.body.position.y, this.width, this.height);  
    }	
 };	
-}

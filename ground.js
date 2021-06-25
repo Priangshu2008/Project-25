@@ -11,7 +11,7 @@ class Ground {
 	  this.width = width;
 	  this.height = height;
 
-	  world.add(world, this.body);
+	  World.add(world, this.body);
 	}
    display() {
 	 rectMode(CENTER);

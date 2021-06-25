@@ -7,14 +7,14 @@ const Body = Matter.Body;
 var engine, world;
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1600, 700);
 	
 
 	engine = Engine.create();
 	world = engine.world;
 
 	//create the Bodies Here
-	paper = new Paper(100, 600, 10);
+	paper = new Paper(200, 240, 40);
 
 ground = new Ground(400, 680, 800, 20);
 
@@ -38,9 +38,9 @@ function draw() {
 
   ground.display();
 
-  leftSide.display();
+  /*leftSide.display();
   bottom.display();
-  rightSide.display();
+  rightSide.display();*/
 
   drawSprites();
 
